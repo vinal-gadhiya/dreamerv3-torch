@@ -31,7 +31,6 @@ RUN pip3 install pip
 # RUN python3 -m pip install --upgrade pip setuptools
 # RUN pip cache purge
 # Envs
-RUN pip3 --version
 ENV NUMBA_CACHE_DIR=/tmp
 
 # dmc setup
