@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
     libx11-6 openjdk-8-jdk x11-xserver-utils xvfb \
     && apt-get clean
 RUN pip3 install --upgrade pip
-
+RUN python3 -m pip3 install --upgrade pip
 # Envs
 ENV NUMBA_CACHE_DIR=/tmp
 
