@@ -26,8 +26,8 @@ RUN apt-get update && apt-get install -y \
     wget unrar cmake g++ libgl1-mesa-dev \
     libx11-6 openjdk-8-jdk x11-xserver-utils xvfb \
     && apt-get clean
-# RUN pip3 install --upgrade pip
-RUN python3 -m pip install --upgrade pip wheel==0.38.4 setuptools==65.5.1
+RUN pip3 install --upgrade pip
+# RUN python3 -m pip install --upgrade pip wheel==0.38.4 setuptools==65.5.1
 # RUN python3 -m pip install --upgrade pip setuptools
 # RUN pip cache purge
 # Envs
