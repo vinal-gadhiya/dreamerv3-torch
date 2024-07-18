@@ -31,11 +31,12 @@ RUN python3 -m pip install --upgrade pip wheel==0.38.4 setuptools==65.5.1
 # RUN python3 -m pip install --upgrade pip setuptools
 # RUN pip cache purge
 # Envs
+RUN pip3 --version
 ENV NUMBA_CACHE_DIR=/tmp
 
 # dmc setup
 RUN pip3 install tensorboard
-RUN pip3 install gym==0.21.0
+RUN pip3 install gym
 # RUN pip3 install https://github.com/openai/gym/archive/refs/tags/0.19.0.tar.gz
 RUN pip3 install mujoco==2.3.5
 RUN pip3 install dm_control==1.0.9
