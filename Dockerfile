@@ -58,5 +58,5 @@ RUN cd .. && rm -rf roms
 RUN pip3 install memory_maze==1.0.3
 
 # minecraft setup
-RUN pip3 install minerl==0.4.4
+RUN pip3 install --upgrade minerl
 RUN pip3 install numpy==1.21.0
