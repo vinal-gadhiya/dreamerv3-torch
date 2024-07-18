@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
     wget unrar cmake g++ libgl1-mesa-dev \
     libx11-6 openjdk-8-jdk x11-xserver-utils xvfb \
     && apt-get clean
-RUN pip3 install --upgrade pip
+RUN pip3 install pip
 # RUN python3 -m pip install --upgrade pip wheel==0.38.4 setuptools==65.5.1
 # RUN python3 -m pip install --upgrade pip setuptools
 # RUN pip cache purge
@@ -36,7 +36,7 @@ ENV NUMBA_CACHE_DIR=/tmp
 
 # dmc setup
 RUN pip3 install tensorboard
-RUN pip3 install gym
+RUN pip3 install gym==0.19.0
 # RUN pip3 install https://github.com/openai/gym/archive/refs/tags/0.19.0.tar.gz
 RUN pip3 install mujoco==2.3.5
 RUN pip3 install dm_control==1.0.9
