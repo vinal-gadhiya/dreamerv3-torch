@@ -14,6 +14,11 @@
 # 3. See results:
 # tensorboard --logdir ~/logdir
 
+
+# docker run -it --rm --gpus all -v $PWD:/workspace -u $(id -u):$(id -g) vinal:dreamerv3 /bin/bash
+# sh xvfb_run.sh python3 dreamer.py --configs dmc_vision --task dmc_walker_walk --logdir "./logdir/dmc_walker_walk"
+
+
 # System
 FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 ARG DEBIAN_FRONTEND=noninteractive
@@ -58,5 +63,8 @@ RUN cd .. && rm -rf roms
 RUN pip3 install memory_maze==1.0.3
 
 # minecraft setup
-RUN pip3 install minerl==0.4.4
+# RUN pip3 install minerl==0.4.4
+RUN apt update
+RUN apt install -y git
+RUN pip3 install git+https://github.com/minerllabs/minerl
 RUN pip3 install numpy==1.21.0
